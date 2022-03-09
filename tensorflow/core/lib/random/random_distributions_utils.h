@@ -25,6 +25,10 @@ limitations under the License.
 namespace tensorflow {
 namespace random {
 
+#ifndef M_PI
+  #define M_PI 3.14159265358979323846
+#endif
+
 // Helper function to convert an 32-bit integer to a float between [0..1).
 PHILOX_DEVICE_INLINE float Uint32ToFloat(uint32_t x) {
   // IEEE754 floats are formatted as follows (MSB first):
